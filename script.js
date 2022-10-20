@@ -4,8 +4,9 @@ window.screen.orientation.onchange = (e) => {
 
 if (window.matchMedia("(orientation: portrait)").matches) {
   // you're in PORTRAIT mode
-  alert('use landscape mode for better experience.');
-  window.screen.orientation.lock('landscape-primary')
+  document.querySelector('body').hidden=true;
+  alert('use landscape mode to view the website.');
+  window.location.reload();
 
 }
 
