@@ -3,18 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Simple Vanilla Js Scroll Animation</title>
+  <title>NB Claims</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 
-<body onload="start()">
-  <!-- partial:index.partial.html -->
+<body onload="start()" id="main-body">
+  
   <section id="side-1-anim">
-    <h1 class="reveal" id="wait" style="display: none">
+    <div class="full" onclick="fullscreen()">
+      <sup>⇱</sup><sub>⇲</sub>
+    </div>
+    <h1 id="wait" style="display: none">
       <!-- Reveal Cube &#8595; -->
+      
       <div class='icon-scroll'>
       </div>
+      
     </h1>
 
   </section>

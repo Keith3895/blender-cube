@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+#main-body:fullscreen {
+	width: 100%;
+	height: 100%;
+	/* background-color: green; */
+}
 
+/* prefix for Chrome & Safari */
+#main-body:-webkit-full-screen {
+	width: 100%;
+	height: 100%;
+	/* background-color: green; */
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Asap", sans-serif;
+  /* font-family: "Asap", sans-serif; */
 }
 
 body {
@@ -250,4 +261,12 @@ section .text-container .text-box h3 {
 
 .button-55:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.full{
+  position: absolute;
+    color: white;
+    right: 10px;
+    top: 10px;
+    font-weight: 600;
 }

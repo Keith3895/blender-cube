@@ -1,9 +1,19 @@
+
+
+if (window.matchMedia("(orientation: portrait)").matches) {
+  // you're in PORTRAIT mode
+  window.screen.orientation.lock("landscape-primary")
+    .then(function () {
+      alert('Locked');
+    })
+    .catch(function (error) {
+      alert(error);
+    });
+  alert('use landscape mode for better experience.');
+  window.location.reload();
+}
+
 function start() {
-  if (window.matchMedia("(orientation: portrait)").matches) {
-    // you're in PORTRAIT mode
-    alert('use landscape mode for better experience.');
-    window.location.reload();
-  }
 
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
@@ -31,19 +41,20 @@ function start() {
 
 
   setTimeout(() => {
+
     document.querySelector('#wait').style.display = 'flex';
     document.querySelector('#wait').style.marginRight = '200px'
   }, 8000);
 
-  document.querySelector('#wait').addEventListener("click", (event) => {
+  document.querySelector('.icon-scroll').addEventListener("click", (event) => {
     document.querySelector('#side-1').scrollIntoView();
   });
 }
 function next(side) {
   document.querySelector(`#side-${side}-anim`).scrollIntoView();
   setTimeout(() => {
-    console.log(`#side-${side+1}`);
-    console.log(document.querySelector(`#side-${side+1}`));
+    console.log(`#side-${side + 1}`);
+    console.log(document.querySelector(`#side-${side + 1}`));
     document.querySelector(`#side-${side}`).scrollIntoView();
   }, 8000);
 }
@@ -55,4 +66,29 @@ function inview(target) {
       document.querySelector('#' + side).scrollIntoView();
     }, 8000);
   }
+}
+
+window.onload = () => {
+  start();
+}
+
+
+function fullscreen(){
+  // var conf = confirm("Fullscreen mode?");
+  var docelem = document.documentElement;
+
+  // if (conf == true) {
+  if (docelem.requestFullscreen) {
+    docelem.requestFullscreen();
+  }
+  else if (docelem.mozRequestFullScreen) {
+    docelem.mozRequestFullScreen();
+  }
+  else if (docelem.webkitRequestFullscreen) {
+    docelem.webkitRequestFullscreen();
+  }
+  else if (docelem.msRequestFullscreen) {
+    docelem.msRequestFullscreen();
+  }
+  // }
 }
