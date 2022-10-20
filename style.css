@@ -291,7 +291,7 @@ section .text-container .text-box h3 {
 }
 
 .full {
-  position: absolute;
+  position: fixed;
   color: white;
   right: 10px;
   top: 10px;
