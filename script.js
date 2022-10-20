@@ -1,12 +1,12 @@
-
+window.screen.orientation.onchange = (e) => {
+  window.location.reload();
+};
 
 if (window.matchMedia("(orientation: portrait)").matches) {
   // you're in PORTRAIT mode
-  // alert('use landscape mode for better experience.');
+  alert('use landscape mode for better experience.');
   window.screen.orientation.lock('landscape-primary')
-  window.screen.orientation.onchange=(e)=>{
-    window.location.reload();
-}
+
 }
 
 function start() {
