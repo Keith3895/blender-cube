@@ -2,15 +2,11 @@
 
 if (window.matchMedia("(orientation: portrait)").matches) {
   // you're in PORTRAIT mode
-  window.screen.orientation.lock("landscape-primary")
-    .then(function () {
-      alert('Locked');
-    })
-    .catch(function (error) {
-      alert(error);
-    });
-  alert('use landscape mode for better experience.');
-  window.location.reload();
+  // alert('use landscape mode for better experience.');
+  window.screen.orientation.lock('landscape-primary')
+  window.screen.orientation.onchange=(e)=>{
+    window.location.reload();
+}
 }
 
 function start() {
@@ -73,7 +69,7 @@ window.onload = () => {
 }
 
 
-function fullscreen(){
+function fullscreen() {
   // var conf = confirm("Fullscreen mode?");
   var docelem = document.documentElement;
 
@@ -89,6 +85,10 @@ function fullscreen(){
   }
   else if (docelem.msRequestFullscreen) {
     docelem.msRequestFullscreen();
+  }
+
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
   }
   // }
 }
