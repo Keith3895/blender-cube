@@ -1,14 +1,19 @@
 window.screen.orientation.onchange = (e) => {
   window.location.reload();
 };
-
 if (window.matchMedia("(orientation: portrait)").matches) {
   // you're in PORTRAIT mode
-  document.querySelector('body').hidden=true;
-  alert('use landscape mode to view the website.');
-  window.location.reload();
+
+  // window.location.reload();
+  document.querySelectorAll('section:not(#fliper)').forEach(el => el.style.display = 'none');
+  document.querySelector('#fliper').style.display = 'flex';
+} else {
+  console.log('what');
+  document.querySelector('#fliper').style.display = 'none';
+  document.querySelectorAll('section:not(#fliper)').forEach(el => el.style.removeProperty('display'));
 
 }
+
 
 function start() {
 
@@ -87,9 +92,10 @@ function fullscreen() {
   else if (docelem.msRequestFullscreen) {
     docelem.msRequestFullscreen();
   }
-
+  document.querySelector('.full').innerHTML='<sub>⇲</sub><sup>⇱</sup>';
   if (document.fullscreenElement) {
     document.exitFullscreen();
+    document.querySelector('.full').innerHTML='<sup>⇱</sup><sub>⇲</sub>';
   }
   // }
 }
