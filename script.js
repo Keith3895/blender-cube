@@ -1,44 +1,58 @@
-if (window.matchMedia("(orientation: portrait)").matches) {
-  // you're in PORTRAIT mode
-  alert('use landscape mode for better experience.');
-  window.location.reload();
-}
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
+function start() {
+  if (window.matchMedia("(orientation: portrait)").matches) {
+    // you're in PORTRAIT mode
+    alert('use landscape mode for better experience.');
+    window.location.reload();
   }
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    var sections = document.querySelectorAll("section");
+    var windowHeight = window.innerHeight;
+    var elementVisible = 150;
+    for (var i = 0; i < reveals.length; i++) {
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+    sections.forEach(el => {
+      var elementTop = sections[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible)
+        inview(el);
+    });
+
+  }
+
+  window.addEventListener("scroll", reveal);
+
+
+  setTimeout(() => {
+    document.querySelector('#wait').style.display = 'flex';
+    document.querySelector('#wait').style.marginRight = '200px'
+  }, 8000);
+
+  document.querySelector('#wait').addEventListener("click", (event) => {
+    document.querySelector('#side-1').scrollIntoView();
+  });
+}
+function next(side) {
+  document.querySelector(`#side-${side}-anim`).scrollIntoView();
+  setTimeout(() => {
+    console.log(`#side-${side+1}`);
+    console.log(document.querySelector(`#side-${side+1}`));
+    document.querySelector(`#side-${side}`).scrollIntoView();
+  }, 8000);
 }
 
-window.addEventListener("scroll", reveal);
 
-
-setTimeout(() => {
-  document.querySelector('#wait').style.display = 'flex';
-  document.querySelector('#wait').style.marginRight = '200px'
-}, 8000);
-
-document.querySelector('#wait').addEventListener("click", (event) => {
-  document.querySelector('#side-1').scrollIntoView();
-});
-document.querySelector('#wait').addEventListener("click", (event) => {
-  document.querySelector('#side-1').scrollIntoView();
-});
-function next(side){
-  document.querySelector('#'+side).scrollIntoView();
-  setTimeout(() => {
-    document.querySelector('#side-2 .text-container').style.display = 'flex';
-    // document.querySelector('#side-2 .text-container').style.paddingTop = '100px';
-    document.querySelector('#side-2 .text-container').style.flexDirection='column';
-  }, 7000);
+function inview(target) {
+  if (target.parentElement.id.includes('anim')) {
+    setTimeout(() => {
+      document.querySelector('#' + side).scrollIntoView();
+    }, 8000);
+  }
 }

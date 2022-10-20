@@ -27,22 +27,21 @@ section:nth-child(1) {
 
 
 
-section:nth-child(2) {
+section#side-1 {
   /* color: #e0ffff; */
   background: url(./side1.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
-section:nth-child(2) p{
+section p{
   font-family: "Sora",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif;
   font-size: 30px;
   font-weight: 200;
-
 }
-section:nth-child(2) span{
+section span{
   font-weight: 600;
 }
-section:nth-child(3) {
+section#side-2-anim {
   /* color: #42455a;
   background: #e0ffff; */
   background: url(./second.gif);
@@ -50,27 +49,42 @@ section:nth-child(3) {
   background-repeat: no-repeat;
   
 }
-
-section:nth-child(4) {
-  color: #42455a;
-  background: #e0ffff;
+section#side-2 {
+  /* color: #e0ffff; */
+  background: url(./side2.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+section#side-3-anim {
   background: url(./third.gif);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
-section:nth-child(5) {
-  color: #e0ffff;
+section#side-3 {
+  background: url(./side3.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+section#side-4-anim {
   background: url(./fourth.gif);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
-section:nth-child(6) {
-  color: #e0ffff;
+section#side-4 {
+  background: url(./side4.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+section#side-5-anim {
   background: url(./fifth.gif);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
-
+section#side-5 {
+  background: url(./side5.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
 
 
 section .container {
@@ -137,7 +151,7 @@ section .text-container .text-box h3 {
 }
 .row-reverse{
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 .row img{
   width: 30%;
