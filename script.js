@@ -45,11 +45,11 @@ function start() {
   // window.addEventListener("scroll", reveal);
 
 
-  setTimeout(() => {
+  // setTimeout(() => {
 
-    document.querySelector('#wait').style.display = 'flex';
-    document.querySelector('#wait').style.marginRight = '200px'
-  }, 8000);
+  //   document.querySelector('#wait').style.display = 'flex';
+  //   document.querySelector('#wait').style.marginRight = '200px'
+  // }, 8000);
 
   document.querySelector('.icon-scroll').addEventListener("click", (event) => {
     document.querySelector('#side-1').scrollIntoView();
@@ -111,6 +111,11 @@ function loader() {
     let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.parentElement.querySelector('.content').style.display = "flex";
+          }, 7000);
+
+
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
           lazyImage.srcset = lazyImage.dataset.srcset;
@@ -118,11 +123,11 @@ function loader() {
           lazyImageObserver.unobserve(lazyImage);
           lazyImage.onload = () => {
             document.querySelectorAll("img.lazy").forEach(function (lazyImage) {
-                lazyImage.src = lazyImage.dataset.src;
-                lazyImage.srcset = lazyImage.dataset.srcset;
-                lazyImage.classList.remove("lazy");
-                lazyImageObserver.unobserve(lazyImage);
-                lazyImage.onload = loader();
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("lazy");
+              lazyImageObserver.unobserve(lazyImage);
+              lazyImage.onload = loader();
             });
           };
         }
