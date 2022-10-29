@@ -17,30 +17,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   /* font-family: "Asap", sans-serif; */
 }
 
 body {
   background: #42455a;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
+  
 }
 
+.scroll-container{
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
 section {
-  min-height: 105vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 102vh;
+  /* scroll-snap-align: start; */
 }
 
 section#side-1-anim {
-  color: #e0ffff;
   background: url(./first.gif);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+}
+section#side-1-anim ul{
+  padding: 0 4vw;
 }
 
 
@@ -53,7 +54,6 @@ section#side-1 {
 }
 
 section p {
-  font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-size: 30px;
   font-weight: 200;
 }
@@ -69,6 +69,10 @@ section#side-2-anim {
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 
+}
+section#side-2-anim .first-item{
+  width: 30%;
+    padding-top: 50px;
 }
 
 section#side-2 {
@@ -117,7 +121,7 @@ section#side-5 {
 
 section .container {
   margin: 50px;
-  width: 50%;
+  width: 60%;
 }
 
 section h1 {
@@ -128,8 +132,8 @@ section h1 {
 
 section h2 {
   font-size: 40px;
-  text-align: center;
-  text-transform: uppercase;
+  /* text-align: center;
+  text-transform: uppercase; */
 }
 
 section .text-container {
@@ -178,13 +182,20 @@ section .text-container .text-box h3 {
   flex-direction: row;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .row-reverse {
   display: flex;
   flex-direction: row-reverse;
 }
-.row-reverse .container{
+
+.row-reverse .container {
   margin: 0px;
 }
+
 .row img {
   width: 30%;
   height: auto;
@@ -201,9 +212,9 @@ section .text-container .text-box h3 {
 .icon-scroll {
   width: 40px;
   height: 70px;
-  margin-left: -200px;
+  margin-left: 200px;
   top: 50%;
-  margin-top: -35px;
+  margin-top: 100px;
   box-shadow: inset 0 0 0 1px #fff;
   border-radius: 25px;
 }
@@ -339,6 +350,11 @@ section .text-container .text-box h3 {
   }
 } */
 
-#fliper{
+#fliper {
   flex-direction: column;
+}
+
+.text-200{
+  font-weight: 200;
+  font-size: 1.7em;
 }
