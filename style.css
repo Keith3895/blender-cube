@@ -365,6 +365,9 @@ section .text-container .text-box h3 {
 
 #fliper {
   flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-200 {
