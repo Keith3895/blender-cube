@@ -41,6 +41,8 @@ function start() {
         if (sections[i].querySelector('.content'))
           inview(sections[i])
       } else {
+        // if (sections[i].querySelector('.img-back'))
+          // sections[i].querySelector('.img-back').style.display = "flex";
         // console.log(sections[i].querySelector('.content'));
         // if(sections[i].querySelector('.content'))sections[i].querySelector('.content').style.display = "none";
       }
@@ -75,7 +77,9 @@ function inview(target) {
 
   if (target.querySelector('.content').style.display === 'none')
     setTimeout(() => {
-      target.querySelector('.content').style.display = "flex";
+      target.querySelector('.content').style.display = null;
+      // target.querySelector('.img-back').style.display = "none";
+      // target.classList.add('background');
     }, 7000);
   // if (target.parentElement.id.includes('anim')) {
   //   setTimeout(() => {
@@ -125,7 +129,7 @@ function loader() {
           setTimeout(() => {
             // debugger
             // el.parentElement.querySelector('.content').style.display = "flex";
-            entry.target.parentElement.querySelector('.content').style.display = "flex";
+            entry.target.parentElement.querySelector('.content').style.display = null;
           }, 7000);
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
