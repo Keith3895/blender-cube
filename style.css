@@ -151,6 +151,7 @@ section h2 {
 
 section .text-container {
   display: flex;
+  padding-right: 100px;
 }
 
 section .text-container .text-box {
@@ -366,12 +367,11 @@ section .text-container .text-box h3 {
 #fliper {
   flex-direction: column;
   display: flex;
-  align-items: center;
+  align-items : center;
   justify-content: center;
 }
 
 .text-200 {
   font-weight: 200;
-  font-size: 1.7em;
-  padding-right: 125px;
+  font-size: 1.3em;
 }
