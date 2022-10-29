@@ -33,16 +33,22 @@ function start() {
         reveals[i].classList.remove("active");
       }
     }
-    sections.forEach(el => {
+    var sections = document.querySelectorAll("section");
+    for (var i = 0; i < sections.length; i++) {
       var elementTop = sections[i].getBoundingClientRect().top;
       var elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible)
-        inview(el);
-    });
+      if (elementTop < windowHeight - elementVisible && sections[i].id.includes('side')) {
+        if (sections[i].querySelector('.content'))
+          inview(sections[i])
+      } else {
+        // console.log(sections[i].querySelector('.content'));
+        // if(sections[i].querySelector('.content'))sections[i].querySelector('.content').style.display = "none";
+      }
+    }
 
   }
 
-  // window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal);
 
 
   // setTimeout(() => {
@@ -66,11 +72,16 @@ function next(side) {
 
 
 function inview(target) {
-  if (target.parentElement.id.includes('anim')) {
+
+  if (target.querySelector('.content').style.display === 'none')
     setTimeout(() => {
-      document.querySelector('#' + side).scrollIntoView();
-    }, 8000);
-  }
+      target.querySelector('.content').style.display = "flex";
+    }, 7000);
+  // if (target.parentElement.id.includes('anim')) {
+  //   setTimeout(() => {
+  //     document.querySelector('#' + side).scrollIntoView();
+  //   }, 8000);
+  // }
 }
 
 window.onload = () => {
@@ -112,10 +123,10 @@ function loader() {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           setTimeout(() => {
+            // debugger
+            // el.parentElement.querySelector('.content').style.display = "flex";
             entry.target.parentElement.querySelector('.content').style.display = "flex";
           }, 7000);
-
-
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
           lazyImage.srcset = lazyImage.dataset.srcset;

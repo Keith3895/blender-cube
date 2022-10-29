@@ -370,4 +370,5 @@ section .text-container .text-box h3 {
 .text-200 {
   font-weight: 200;
   font-size: 1.7em;
+  padding-right: 125px;
 }
