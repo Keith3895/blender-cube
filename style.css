@@ -25,15 +25,14 @@ body {
   background: #42455a;
 
 }
-
-.scroll-container {
+html{
   scroll-snap-type: y mandatory;
-  overflow: auto;
 }
 
 section {
   min-height: 102vh;
-  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 section#side-1-anim {
@@ -77,12 +76,22 @@ section#side-2-anim {
   /* background: url(./second.gif); */
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+  font-weight: 300;
 
 }
 
-section#side-2-anim .first-item {
+section#side-2-anim .item {
   width: 30%;
-  padding-top: 50px;
+  padding-top: 15px;
+}
+section#side-2-anim .second{
+  padding-left: 50px;
+}
+section#side-2-anim .third{
+  margin-top: -190px;
+}
+section#side-2-anim ul{
+  padding-left: 25px;;
 }
 
 section#side-2 {
@@ -130,14 +139,8 @@ section#side-5 {
 
 
 section .container {
-  margin: 50px;
+  margin: 40px;
   width: 60%;
-}
-
-section h1 {
-  font-size: 3rem;
-  margin: 20px;
-
 }
 
 section h2 {
