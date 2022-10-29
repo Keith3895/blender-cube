@@ -139,7 +139,55 @@
 
   </section>
   <!-- partial -->
+  <section id="side-4-anim">
+    <img src="./back.webp" alt="" class="img-back lazy" data-src="./fourth.gif"
+      data-srcset="./fourth.gif 2x,./second.gif 1x">
+    <div class="content" style="display: none;">
+      <img src="./Slide-04.png" alt="" style="width: 100%; height: 100vh;">  
+      <div class='icon-scroll'>
+      </div>
+    </div>  
 
+  </section>
+
+  <section id="side-5-anim">
+    <img src="./back.webp" alt="" class="img-back lazy" data-src="./fifth.gif"
+      data-srcset="./fifth.gif 2x,./first.gif 1x">
+    <div class="column content" style="display: none;">
+      <div class="slideshow-container">
+
+        <div class="mySlides mySlides3 fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./Slide-05_carousel-01.png" style="width:100%">
+          <!-- <div class="text">Clear line of sight for management</div> -->
+        </div>
+
+        <div class="mySlides mySlides3 fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./Slide-05_carousel-02.png" style="width:100%">
+          <!-- <div class="text">Clear line of sight for management</div> -->
+        </div>
+        <div class="mySlides mySlides3 fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./Slide-05_carousel-03.png" style="width:100%">
+          <!-- <div class="text">Clear line of sight for management</div> -->
+        </div>
+        
+
+        <a class="prev" onclick="plusSlides(-1,3)">❮</a>
+        <a class="next" onclick="plusSlides(1,3)">❯</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot dot3" onclick="currentSlide(1,3)"></span>
+        <span class="dot dot3" onclick="currentSlide(2,3)"></span>
+        <span class="dot dot3" onclick="currentSlide(3,3)"></span>
+      </div>
+    </div>
+
+  </section>
   <script src="./script.js"></script>
   <script src="./slider.js"></script>
 </body>
