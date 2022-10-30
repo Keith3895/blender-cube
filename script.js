@@ -1,6 +1,5 @@
-function test(e) {
-  debugger
-}
+var sideCounter = 1;
+document.querySelector(`#side-${sideCounter}-anim`).scrollIntoView();
 window.screen.orientation.onchange = (e) => {
   window.location.reload();
 };
@@ -42,7 +41,7 @@ function start() {
           inview(sections[i])
       } else {
         // if (sections[i].querySelector('.img-back'))
-          // sections[i].querySelector('.img-back').style.display = "flex";
+        // sections[i].querySelector('.img-back').style.display = "flex";
         // console.log(sections[i].querySelector('.content'));
         // if(sections[i].querySelector('.content'))sections[i].querySelector('.content').style.display = "none";
       }
@@ -59,9 +58,12 @@ function start() {
   //   document.querySelector('#wait').style.marginRight = '200px'
   // }, 8000);
 
-  document.querySelector('.icon-scroll').addEventListener("click", (event) => {
-    document.querySelector('#side-1').scrollIntoView();
-  });
+  document.querySelectorAll('.icon-scroll').forEach(el=>{
+    el.addEventListener("click", (event) => {
+      sideCounter++;
+      document.querySelector(`#side-${sideCounter}-anim`).scrollIntoView();
+    });
+  })
 }
 function next(side) {
   document.querySelector(`#side-${side}-anim`).scrollIntoView();

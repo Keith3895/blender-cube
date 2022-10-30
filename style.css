@@ -235,7 +235,14 @@ section#side-1-anim .icon-scroll:before{
 
 section#side-2-anim .icon-scroll{
   margin-top: -100px;
+  margin-left: -250px;
   box-shadow: inset 0 0 0 1px #000;
+}
+section#side-5-anim .icon-scroll{
+  margin-left: -250px;
+}
+section#side-3-anim .icon-scroll{
+  margin-top: -300px;
 }
 section#side-2-anim .icon-scroll:before{
   /* background: #ed1c25; */
