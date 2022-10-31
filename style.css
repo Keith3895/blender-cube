@@ -31,7 +31,7 @@ html{
 }
 
 section {
-  min-height: 102vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   height: 100vh;
   background: url(./back.png);

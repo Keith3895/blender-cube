@@ -9,183 +9,225 @@
 </head>
 
 <body id="main-body">
+  <div class="wrap">
+    <div id="wrap">
+      <div class="full" onclick="fullscreen()">
+        <sup>⇱</sup><sub>⇲</sub>
+      </div>
+      <section id="fliper">
+        <div class="phone">
+        </div>
+        <div class="message">
+          Please rotate your device to start!
+        </div>
+      </section>
 
-  <div class="full" onclick="fullscreen()">
-    <sup>⇱</sup><sub>⇲</sub>
+
+
+      <section id="side-1-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./first.gif" data-srcset="./first.gif">
+        <div class="content">
+          <img src="./BeFunky-photo.png" alt="" style="width: 100%; height: 100vh;">
+        </div>
+
+      </section>
+
+      <section id="side-2-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./second.gif"
+          data-srcset="./second.gif 2x,./first.gif 1x">
+        <div class="column content background">
+          <div class="slideshow-container">
+
+            <div class="mySlides mySlides1 fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="Slide-02_carousel-01.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+            <div class="mySlides mySlides1 fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="Slide-02_carousel-02.png" style="width:100%">
+              <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides mySlides1 fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="Slide-02_carousel-03.png" style="width:100%">
+              <div class="text">
+
+              </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1,1)">❮</a>
+            <a class="next" onclick="plusSlides(1,1)">❯</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot dot1" onclick="currentSlide(1,1)"></span>
+            <span class="dot dot1" onclick="currentSlide(2,1)"></span>
+            <span class="dot dot1" onclick="currentSlide(3,1)"></span>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="side-3-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./third.gif"
+          data-srcset="./third.gif 2x,./first.gif 1x">
+        <div class="column content">
+          <div class="slideshow-container">
+
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">1 / 7</div>
+              <img src="./Slide-03_carousel-01.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">2 / 7</div>
+              <img src="./Slide-03_carousel-02.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">3 / 7</div>
+              <img src="./Slide-03_carousel-03.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">4 / 7</div>
+              <img src="./Slide-03_carousel-04.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">5 / 7</div>
+              <img src="./Slide-03_carousel-05.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">6 / 7</div>
+              <img src="./Slide-03_carousel-06.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+            <div class="mySlides mySlides2 fade">
+              <div class="numbertext">7 / 7</div>
+              <img src="Slide-03_carousel-07.png" style="width:100%">
+              <div class="text">
+              </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1,2)">❮</a>
+            <a class="next" onclick="plusSlides(1,2)">❯</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot dot2" onclick="currentSlide(1,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(2,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(3,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(4,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(5,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(6,2)"></span>
+            <span class="dot dot2" onclick="currentSlide(7,2)"></span>
+          </div>
+        </div>
+
+      </section>
+      <!-- partial -->
+      <section id="side-4-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./fourth.gif"
+          data-srcset="./fourth.gif 2x,./second.gif 1x">
+        <div class="content">
+          <img src="./Slide-04.png" alt="" style="width: 100%; height: 100vh;">
+          <div class="text">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section id="side-5-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./fifth.gif"
+          data-srcset="./fifth.gif 2x,./first.gif 1x">
+        <div class="column content">
+          <div class="slideshow-container">
+
+            <div class="mySlides mySlides3 fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./Slide-05_carousel-01.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+            <div class="mySlides mySlides3 fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./Slide-05_carousel-02.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides3 fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./Slide-05_carousel-03.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1,3)">❮</a>
+            <a class="next" onclick="plusSlides(1,3)">❯</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot dot3" onclick="currentSlide(1,3)"></span>
+            <span class="dot dot3" onclick="currentSlide(2,3)"></span>
+            <span class="dot dot3" onclick="currentSlide(3,3)"></span>
+          </div>
+        </div>
+
+      </section>
+      <section id="side-6-anim">
+        <img src="./back.webp" alt="" class="img-back lazy" data-src="./sixth.gif"
+          data-srcset="./sixth.gif 2x,./first.gif 1x">
+        <div class="column content">
+          <div class="slideshow-container">
+
+            <div class="mySlides mySlides4 fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./Slide-06_carousel-01.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+            <div class="mySlides mySlides4 fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./Slide-06_carousel-02.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+            <div class="mySlides mySlides4 fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./Slide-06_carousel-03.png" style="width:100%">
+              <!-- <div class="text">Clear line of sight for management</div> -->
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1,4)">❮</a>
+            <a class="next" onclick="plusSlides(1,4)">❯</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot dot3" onclick="currentSlide(1,4)"></span>
+            <span class="dot dot3" onclick="currentSlide(2,4)"></span>
+            <span class="dot dot3" onclick="currentSlide(3,4)"></span>
+          </div>
+        </div>
+
+      </section>
+    </div>
   </div>
-  <section id="fliper">
-    <div class="phone">
-    </div>
-    <div class="message">
-      Please rotate your device to start!
-    </div>
-  </section>
-
-
-  <section id="side-1-anim">
-    <img src="./back.webp" alt="" class="img-back lazy" data-src="./first.gif"
-      data-srcset="./first.gif">
-    <div class="content">
-      <img src="./BeFunky-photo.png" alt="" style="width: 100%; height: 100vh;">  
-    </div>  
-
-  </section>
-
-  <section id="side-2-anim">
-    <img src="./back.webp" alt="" class="img-back lazy" data-src="./second.gif"
-      data-srcset="./second.gif 2x,./first.gif 1x">
-    <div class="column content background">
-      <div class="slideshow-container">
-
-        <div class="mySlides mySlides1 fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="Slide-02_carousel-01.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-
-        <div class="mySlides mySlides1 fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="Slide-02_carousel-02.png" style="width:100%">
-          <!-- <div class="text">Caption Two</div> -->
-        </div>
-
-        <div class="mySlides mySlides1 fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="Slide-02_carousel-03.png" style="width:100%">
-          <div class="text">
-
-          </div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1,1)">❮</a>
-        <a class="next" onclick="plusSlides(1,1)">❯</a>
-
-      </div>
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot dot1" onclick="currentSlide(1,1)"></span>
-        <span class="dot dot1" onclick="currentSlide(2,1)"></span>
-        <span class="dot dot1" onclick="currentSlide(3,1)"></span>
-      </div>
-    </div>
-
-  </section>
-
-  <section id="side-3-anim">
-    <img src="./back.webp" alt="" class="img-back lazy" data-src="./third.gif"
-      data-srcset="./third.gif 2x,./first.gif 1x">
-    <div class="column content">
-      <div class="slideshow-container">
-
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">1 / 7</div>
-          <img src="./Slide-03_carousel-01.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">2 / 7</div>
-          <img src="./Slide-03_carousel-02.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">3 / 7</div>
-          <img src="./Slide-03_carousel-03.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">4 / 7</div>
-          <img src="./Slide-03_carousel-04.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">5 / 7</div>
-          <img src="./Slide-03_carousel-05.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">6 / 7</div>
-          <img src="./Slide-03_carousel-06.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-
-        <div class="mySlides mySlides2 fade">
-          <div class="numbertext">7 / 7</div>
-          <img src="Slide-03_carousel-07.png" style="width:100%">
-          <div class="text">
-          </div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1,2)">❮</a>
-        <a class="next" onclick="plusSlides(1,2)">❯</a>
-
-      </div>
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot dot2" onclick="currentSlide(1,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(2,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(3,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(4,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(5,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(6,2)"></span>
-        <span class="dot dot2" onclick="currentSlide(7,2)"></span>
-      </div>
-    </div>
-
-  </section>
-  <!-- partial -->
-  <section id="side-4-anim">
-    <img src="./back.webp" alt="" class="img-back lazy" data-src="./fourth.gif"
-      data-srcset="./fourth.gif 2x,./second.gif 1x">
-    <div class="content" >
-      <img src="./Slide-04.png" alt="" style="width: 100%; height: 100vh;">  
-      <div class="text">
-
-      </div>
-    </div>  
-
-  </section>
-
-  <section id="side-5-anim">
-    <img src="./back.webp" alt="" class="img-back lazy" data-src="./fifth.gif"
-      data-srcset="./fifth.gif 2x,./first.gif 1x">
-    <div class="column content" >
-      <div class="slideshow-container">
-
-        <div class="mySlides mySlides3 fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="./Slide-05_carousel-01.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-
-        <div class="mySlides mySlides3 fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="./Slide-05_carousel-02.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        <div class="mySlides mySlides3 fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="./Slide-05_carousel-03.png" style="width:100%">
-          <!-- <div class="text">Clear line of sight for management</div> -->
-        </div>
-        
-
-        <a class="prev" onclick="plusSlides(-1,3)">❮</a>
-        <a class="next" onclick="plusSlides(1,3)">❯</a>
-
-      </div>
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot dot3" onclick="currentSlide(1,3)"></span>
-        <span class="dot dot3" onclick="currentSlide(2,3)"></span>
-        <span class="dot dot3" onclick="currentSlide(3,3)"></span>
-      </div>
-    </div>
-
-  </section>
+  <script src="https://cdn.jsdelivr.net/gh/fabeat/responsive-fullpage-scroll@v1.0.3/dist/fullpage-scroll.js"></script>
   <script src="./script.js"></script>
   <script src="./slider.js"></script>
 </body>

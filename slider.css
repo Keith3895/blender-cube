@@ -19,7 +19,7 @@ img {vertical-align: middle;}
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 3em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -89,4 +89,29 @@ img {vertical-align: middle;}
 }
 .mySlides img{
     height: 100vh;
+}
+
+#indicator {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#indicator > div {
+  background-color: white;
+  width:10px;
+  height:10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#indicator > div.active {
+  transform: scale(1.6);
+  background-color: #ed1c25;
+
 }
