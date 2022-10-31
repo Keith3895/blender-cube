@@ -34,6 +34,9 @@ section {
   min-height: 102vh;
   scroll-snap-align: start;
   height: 100vh;
+  background: url(./back.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 
 section#side-1-anim {
@@ -65,10 +68,15 @@ section span {
 }
 
 .img-back {
-  position: absolute;
-  width: 100%;
-  z-index: -999;
-  height: 100vh;
+  position: relative;
+  width: 10%;
+  /* z-index: -999; */
+  height: auto;
+  top: 85%;
+  left: 45%;
+}
+.content{
+  margin-top: -5%;
 }
 
 section#side-2-anim {
