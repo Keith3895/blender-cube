@@ -9,8 +9,8 @@ if (window.matchMedia("(orientation: portrait)").matches) {
   // window.location.reload();
   document.querySelectorAll('section:not(#fliper)').forEach(el => el.style.display = 'none');
   document.querySelector('#fliper').style.display = 'flex';
+  document.querySelector('#indicator').style.display = 'none';
 } else {
-  console.log('what');
   document.querySelector('#fliper').style.display = 'none';
   document.querySelectorAll('section:not(#fliper)').forEach(el => el.style.removeProperty('display'));
 

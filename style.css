@@ -69,14 +69,14 @@ section span {
 
 .img-back {
   position: relative;
-  width: 10%;
+  width: 20%;
   /* z-index: -999; */
   height: auto;
-  top: 85%;
-  left: 85%;
+  top: 75%;
+  left: 80%;
 }
 .content{
-  margin-top: -5%;
+  margin-top: -11%;
 }
 
 section#side-2-anim {
@@ -399,6 +399,7 @@ section#side-2-anim .icon-scroll:before{
   display: flex;
   align-items : center;
   justify-content: center;
+  background: #42455a ;
 }
 
 .text-200 {
