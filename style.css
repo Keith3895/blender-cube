@@ -25,7 +25,8 @@ body {
   background: #42455a;
 
 }
-html{
+
+html {
   scroll-snap-type: y mandatory;
   transition: ease-in-out 1s;
 }
@@ -75,7 +76,8 @@ section span {
   top: 75%;
   left: 80%;
 }
-.content{
+
+.content {
   margin-top: -11%;
 }
 
@@ -84,7 +86,8 @@ section#side-2-anim {
   background: #e0ffff; */
   font-weight: 300;
 }
-.background{
+
+.background {
   background: url(./back.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -94,14 +97,18 @@ section#side-2-anim .item {
   width: 30%;
   padding-top: 15px;
 }
-section#side-2-anim .second{
+
+section#side-2-anim .second {
   padding-left: 50px;
 }
-section#side-2-anim .third{
+
+section#side-2-anim .third {
   margin-top: -190px;
 }
-section#side-2-anim ul{
-  padding-left: 25px;;
+
+section#side-2-anim ul {
+  padding-left: 25px;
+  ;
 }
 
 section#side-2 {
@@ -232,29 +239,35 @@ section .text-container .text-box h3 {
   position: absolute;
   left: 50%;
 }
-section#side-1-anim .icon-scroll{
+
+section#side-1-anim .icon-scroll {
   margin-left: 200px;
   margin-top: 100px;
   box-shadow: inset 0 0 0 1px #fff;
 }
-section#side-1-anim .icon-scroll:before{
+
+section#side-1-anim .icon-scroll:before {
   /* background: #fff; */
 }
 
-section#side-2-anim .icon-scroll{
+section#side-2-anim .icon-scroll {
   margin-top: -100px;
   margin-left: -250px;
   box-shadow: inset 0 0 0 1px #000;
 }
-section#side-5-anim .icon-scroll{
+
+section#side-5-anim .icon-scroll {
   margin-left: -250px;
 }
-section#side-3-anim .icon-scroll{
+
+section#side-3-anim .icon-scroll {
   margin-top: -300px;
 }
-section#side-2-anim .icon-scroll:before{
+
+section#side-2-anim .icon-scroll:before {
   /* background: #ed1c25; */
 }
+
 .icon-scroll {
   width: 40px;
   height: 70px;
@@ -397,12 +410,136 @@ section#side-2-anim .icon-scroll:before{
 #fliper {
   flex-direction: column;
   display: flex;
-  align-items : center;
+  align-items: center;
   justify-content: center;
-  background: #42455a ;
+  background: #42455a;
 }
 
 .text-200 {
   font-weight: 200;
   font-size: 1.3em;
+}
+
+.know-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.container-cta {
+  max-width: 1200px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.background-container {
+  display: flex;
+  /* background-image: url(https://www.se-coastalgroup.org.uk/wp-content/gallery/images/diggers-sunk-seasalter.jpg); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 100px !important;
+  padding-top: 100px !important;
+  text-align: center !important;
+  height: 100vh;
+  padding: 100px;
+  align-items: center;
+}
+
+.background-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear,
+      left bottom,
+      left top,
+      from(rgba(23, 27, 38, 0.92)),
+      to(rgba(39, 45, 62, 0.92)));
+  background-image: linear-gradient(to top,
+      rgba(23, 27, 38, 0.92) 0%,
+      rgba(39, 45, 62, 0.92) 100%);
+}
+
+.background-cover {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+
+.line-heading {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.line-heading-left {
+  text-align: right !important;
+  margin: 0;
+  padding: 0;
+}
+
+.line-heading-left h2 {
+  color: #fff;
+  font-size: 2.625rem;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  line-height: 1.1;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.line-heading-left h4 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  color: #05b0e3;
+  line-height: 1.1;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.line-heading p {
+  margin-left: 38px;
+  margin-top: 0;
+  border-left: 3px solid #05b0e3;
+  padding: 12px 0 12px 30px;
+  line-height: 24px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  color: #bfbfbf;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.anchor {
+  color: red;
+  text-decoration: blink;
+  font-weight: 400;
+}
+
+@media only screen and (orientation: landscape) {
+  .line-heading-left h2 {
+    font-size: 1.625rem;
+
+  }
+
+  .line-heading-left h4 {
+    font-size: 1.4rem;
+  }
 }
